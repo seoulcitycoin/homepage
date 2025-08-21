@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Donate to SCITY</title>
+  <title>SCITY Communication Channels</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <style> 
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
     body {
       font-family: 'Orbitron', sans-serif;
       margin: 0;
@@ -46,30 +46,41 @@
     a:hover {
       text-decoration: underline;
     }
-    .wallet {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-      word-break: break-word;
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #aaa;
     }
-    .copy-btn {
-      background-color: #ffcc00;
-      border: none;
-      color: black;
-      padding: 0.5rem 1.2rem;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 0.5rem;
-    }
-    .qr {
-      margin-top: 2rem;
-    }
-    .note {
-      font-size: 0.95rem;
-      margin-top: 2rem;
-      opacity: 0.8;
-    }
-    .back-link {
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SCITY Communication Channels</h1>
+    <p>Join the conversation about the Seoul City Coin project — ask questions, share ideas, and grow with us!</p>
+  </header>
+
+  <section>
+    <h2>📢 Official Channels</h2>
+    <p>
+      ✅ X (Twitter): <br>
+      <a href="https://x.com/seoulcitycoin" target="_blank">https://x.com/seoulcitycoin</a>
+    </p>
+    <p>
+      ✅ KakaoTalk Open Chat: <br>
+      <a href="https://open.kakao.com/o/gBDOjPIh" target="_blank">https://open.kakao.com/o/gBDOjPIh</a>
+    </p>
+    <p>
+      ✅ Official Email: <br>
+      <a href="mailto:seoulcitycoin@gmail.com">seoulcitycoin@gmail.com</a>
+    </p>
+    <p>
+      ✅ Website: <br>
+      <a href="https://scity.onrender.com" target="_blank">scity.onrender.com</a>
+    </p>
+  </section>
+
+  <div style="margin-top: 2rem;">
+    <a href="/en/index.html" style="
       display: inline-block;
       background-color: #00d1b2;
       color: white;
@@ -79,54 +90,11 @@
       font-size: 1rem;
       text-decoration: none;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      margin-top: 2rem;
-    }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Donate to SCITY</h1>
-  </header>
-
-  <section>
-    <p>The SCITY project is community-driven.<br>
-    Your donation will help us develop the project and grow the ecosystem.</p>
-
-    <h2>🪙 Ethereum Wallet Address</h2>
-    <div class="wallet" id="wallet">0xB9352AF91341E85c08d79C66131cB8552214b16d</div>
-    <button class="copy-btn" onclick="copyWallet()">Copy Wallet Address</button>
-
-    <div class="qr">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?data=ethereum:0xB9352AF91341E85c08d79C66131cB8552214b16d&size=180x180" alt="Ethereum QR">
-      <p style="font-size: 0.9rem; margin-top: 0.5rem;">Scan with MetaMask to send ETH</p>
-    </div>
-
-    <div class="note">
-      ⚠️ All donations are voluntary and non-refundable.<br>
-      Funds will be used transparently for SCITY’s development and growth.
-    </div>
-
-    <a href="/en/index.html" class="back-link">← Back to Main</a>
-  </section>
+    ">← Back to Main</a>
+  </div>
 
   <footer>
-    &copy; 2025 SCITY Project | Seoul Meme City Coin
+    &copy; 2025 SEOUL CITY COIN | A community-driven Web3 meme coin project
   </footer>
-
-  <script>
-    function copyWallet() {
-      const wallet = document.getElementById('wallet').innerText;
-      navigator.clipboard.writeText(wallet).then(() => {
-        alert("Wallet address copied to clipboard!");
-      });
-    }
-  </script>
-
 </body>
 </html>
