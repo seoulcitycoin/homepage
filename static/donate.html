@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>SCITY 기부하기</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', 'Noto Sans KR', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    .donate-box {
+      background-color: rgba(255,255,255,0.07);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    }
+    h1 {
+      color: #ffcc00;
+      margin-bottom: 1rem;
+    }
+    .wallet {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      word-break: break-all;
+    }
+    .copy-btn {
+      background-color: #ffcc00;
+      border: none;
+      color: black;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .qr {
+      margin-top: 2rem;
+    }
+    .note {
+      font-size: 0.95rem;
+      margin-top: 2rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="donate-box">
+    <h1>SCITY 기부하기</h1>
+    <p>SCITY 프로젝트는 커뮤니티 중심으로 운영되며,<br>
+    여러분의 기부는 프로젝트 개발과 생태계 구축에 사용됩니다.</p>
+
+    <h2>🪙 기부 받는 지갑 (이더리움 기반)</h2>
+    <div class="wallet" id="wallet">0xB9352AF91341E85c08d79C66131cB8552214b16d</div>
+    <button class="copy-btn" onclick="copyWallet()">지갑 주소 복사</button>
+
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=ethereum:0xB9352AF91341E85c08d79C66131cB8552214b16d&size=180x180" alt="Ethereum QR">
+      <p style="font-size: 0.9rem; margin-top: 0.5rem;">MetaMask로 스캔 후 전송</p>
+    </div>
+
+    <div class="note">
+      ⚠️ 모든 기부는 자발적으로 이루어지며 환불되지 않습니다.<br>
+      기부금은 SCITY 프로젝트의 발전을 위해 투명하게 사용됩니다.
+    </div>
+  </div>
+
+  <script>
+    function copyWallet() {
+      const wallet = document.getElementById('wallet').innerText;
+      navigator.clipboard.writeText(wallet).then(() => {
+        alert("지갑 주소가 복사되었습니다!");
+      });
+    }
+  </script>
+
+</body>
+</html>
