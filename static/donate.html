@@ -4,31 +4,46 @@
   <meta charset="UTF-8">
   <title>SCITY 기부하기</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
+    nav a {
+      margin: 0 1rem;
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     body {
-      font-family: 'Orbitron', 'Noto Sans KR', sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: white;
-      padding: 2rem;
       text-align: center;
     }
-    .donate-box {
-      background-color: rgba(255,255,255,0.07);
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    header {
+      padding: 2rem 1rem;
+      background-color: rgba(0,0,0,0.4);
     }
     h1 {
+      font-size: 2rem;
       color: #ffcc00;
-      margin-bottom: 1rem;
+    }
+    .section {
+      margin: 3rem auto;
+      padding: 1rem 2rem;
+      max-width: 600px;
+      background-color: rgba(255,255,255,0.07);
+      border-radius: 1rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
     }
     .wallet {
       font-size: 1.2rem;
       margin: 1rem 0;
-      word-break: break-all;
+      word-break: break-word;
     }
     .copy-btn {
       background-color: #ffcc00;
@@ -48,16 +63,38 @@
       margin-top: 2rem;
       opacity: 0.8;
     }
+    .back-link {
+      display: inline-block;
+      background-color: #00d1b2;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
 
-  <div class="donate-box">
+  <header>
     <h1>SCITY 기부하기</h1>
+    <nav>
+      <a href="/static/lightpaper_kr.html">라이트페이퍼</a>
+      <a href="/static/whitepaper_kr.html">화이트페이퍼</a>
+      <a href="/static/tokenomics_kr.html">토큰노믹스</a>
+      <a href="/static/contact.html">소통채널</a>
+      <a href="/static/donate.html">💖 기부하기</a>
+    </nav>
+  </header>
+
+  <div class="section">
     <p>SCITY 프로젝트는 커뮤니티 중심으로 운영되며,<br>
     여러분의 기부는 프로젝트 개발과 생태계 구축에 사용됩니다.</p>
 
-    <h2>🪙 기부 받는 지갑 (이더리움 기반)</h2>
+    <h2 style="margin-top: 2rem;">🪙 기부 받는 지갑 (이더리움 기반)</h2>
     <div class="wallet" id="wallet">0xB9352AF91341E85c08d79C66131cB8552214b16d</div>
     <button class="copy-btn" onclick="copyWallet()">지갑 주소 복사</button>
 
@@ -70,20 +107,8 @@
       ⚠️ 모든 기부는 자발적으로 이루어지며 환불되지 않습니다.<br>
       기부금은 SCITY 프로젝트의 발전을 위해 투명하게 사용됩니다.
     </div>
-    <div style="margin-top: 2rem;">
-      <a href="/index.html" style="
-        display: inline-block;
-        background-color: #00d1b2;
-        color: white;
-        padding: 0.6rem 1.4rem;
-        border-radius: 8px;
-        font-weight: bold;
-        font-size: 1rem;
-        text-decoration: none;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      ">← 메인으로 돌아가기</a>
-    </div>
-   
+
+    <a href="/index.html" class="back-link">← 메인으로 돌아가기</a>
   </div>
 
   <script>
@@ -95,6 +120,5 @@
     }
   </script>
 
-
-  
+</body>
 </html>
