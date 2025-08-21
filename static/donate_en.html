@@ -4,26 +4,41 @@
   <meta charset="UTF-8">
   <title>Donate to SCITY</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
+    nav a {
+      margin: 0 1rem;
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     body {
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: white;
-      padding: 2rem;
       text-align: center;
     }
-    .donate-box {
-      background-color: rgba(255,255,255,0.07);
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    header {
+      padding: 2rem 1rem;
+      background-color: rgba(0,0,0,0.4);
     }
     h1 {
+      font-size: 2rem;
       color: #ffcc00;
-      margin-bottom: 1rem;
+    }
+    .section {
+      margin: 3rem auto;
+      padding: 1rem 2rem;
+      max-width: 600px;
+      background-color: rgba(255,255,255,0.07);
+      border-radius: 1rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
     }
     .wallet {
       font-size: 1.2rem;
@@ -50,46 +65,57 @@
     }
     .back-link {
       display: inline-block;
-      margin-top: 2rem;
-      padding: 0.6rem 1.4rem;
       background-color: #00d1b2;
       color: white;
-      text-decoration: none;
+      padding: 0.6rem 1.4rem;
       border-radius: 8px;
       font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
-  <div class="donate-box">
-    <h1>Support SCITY</h1>
-    <p>The SCITY project is community-driven.<br>
-    Your donation will help fund development and expand our ecosystem.</p>
+  <header>
+    <h1>Donate to SCITY</h1>
+    <nav>
+      <a href="/static/lightpaper_en.html">Lightpaper</a>
+      <a href="/static/whitepaper_en.html">Whitepaper</a>
+      <a href="/static/tokenomics_en.html">Tokenomics</a>
+      <a href="/static/contact.html">Contact</a>
+      <a href="/static/donate_en.html">💖 Donate</a>
+    </nav>
+  </header>
 
-    <h2>🪙 Ethereum Wallet Address</h2>
+  <div class="section">
+    <p>The SCITY project is community-driven.<br>
+    Your donation will help us develop the project and grow the ecosystem.</p>
+
+    <h2 style="margin-top: 2rem;">🪙 Ethereum Wallet Address</h2>
     <div class="wallet" id="wallet">0xB9352AF91341E85c08d79C66131cB8552214b16d</div>
-    <button class="copy-btn" onclick="copyWallet()">Copy Address</button>
+    <button class="copy-btn" onclick="copyWallet()">Copy Wallet Address</button>
 
     <div class="qr">
       <img src="https://api.qrserver.com/v1/create-qr-code/?data=ethereum:0xB9352AF91341E85c08d79C66131cB8552214b16d&size=180x180" alt="Ethereum QR">
-      <p style="font-size: 0.9rem; margin-top: 0.5rem;">Scan with MetaMask or wallet app</p>
+      <p style="font-size: 0.9rem; margin-top: 0.5rem;">Scan with MetaMask to send ETH</p>
     </div>
 
     <div class="note">
       ⚠️ All donations are voluntary and non-refundable.<br>
-      Your contribution will be used transparently to support SCITY’s growth.
+      Funds will be used transparently for SCITY’s development and growth.
     </div>
 
-    <a class="back-link" href="/en/index.html">← Back to Main</a>
+    <a href="/en/index.html" class="back-link">← Back to Main</a>
   </div>
 
   <script>
     function copyWallet() {
       const wallet = document.getElementById('wallet').innerText;
       navigator.clipboard.writeText(wallet).then(() => {
-        alert("Wallet address copied!");
+        alert("Wallet address copied to clipboard!");
       });
     }
   </script>
