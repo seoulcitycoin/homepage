@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>서울시티코인 - 빨리빨리(8282) 정신으로 탄생한 밈코인</title>
+  <title>서울시티코인(SCITY) - 8282 정신의 디지털 여행 밈코인</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta name="description" content="SCITY — 총발행량 8,282,828,282 SCITY · 프리세일 10% · BNB Smart Chain(BEP-20) · 초기 DEX PancakeSwap">
   <style>
     nav a {
       margin: 0 1rem;
@@ -14,99 +14,109 @@
       font-weight: bold;
       font-size: 1.05rem;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
     body {
       font-family: 'Orbitron', sans-serif;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
+      color: white; text-align: center;
     }
-    header {
-      padding: 2rem 1rem;
-      background-color: rgba(0,0,0,0.4);
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    p.tagline {
-      font-size: 1.2rem;
-      font-style: italic;
-      color: #82d4f9;
-    }
+    header { padding: 2rem 1rem; background-color: rgba(0,0,0,0.4); }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    p.tagline { font-size: 1.2rem; font-style: italic; color: #82d4f9; }
+
     .section {
-      margin: 3rem auto;
-      padding: 1rem 2rem;
-      max-width: 800px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 1rem;
+      margin: 3rem auto; padding: 1rem 2rem; max-width: 900px;
+      background-color: rgba(255,255,255,0.05); border-radius: 1rem; text-align: left;
     }
-    .section h2 {
-      color: #ffd700;
+    .section h2 { color: #ffd700; text-align: center; }
+    .section p { line-height: 1.7; }
+    .section ul { list-style: none; padding-left: 0; }
+    .section li { margin: .5rem 0; }
+
+    .facts {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px; margin-top: 1rem;
     }
+    .fact {
+      background: rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.1);
+      border-radius: .8rem; padding: 1rem; text-align: center;
+    }
+    .fact b { display: block; font-size: 1.1rem; margin-bottom: .4rem; color: #ffd700; }
+
+    .cta-wrap { text-align: center; margin-top: 1rem; }
     .button {
-      display: inline-block;
-      padding: 0.8rem 1.6rem;
-      background-color: #00d1b2;
-      color: white;
-      font-weight: bold;
-      border-radius: 0.5rem;
-      margin-top: 1rem;
-      text-decoration: none;
+      display: inline-block; padding: 0.8rem 1.6rem;
+      background-color: #00d1b2; color: white; font-weight: bold;
+      border-radius: 0.5rem; margin: .25rem .4rem; text-decoration: none;
     }
-    footer {
-      margin-top: 5rem;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
+    .button.secondary { background-color: transparent; border: 1px solid #00d1b2; }
+
+    footer { margin-top: 5rem; padding: 1rem; font-size: 0.9rem; color: #aaa; text-align: center; }
   </style>
 </head>
 <body>
   <header>
-    <h1>서울시티코인</h1>
-    
+    <h1>서울시티코인 (SCITY)</h1>
     <p class="tagline">빨리빨리(8282) 정신으로 태어난 디지털 여행 밈코인</p>
-     <nav>
+    <nav>
       <a href="/static/lightpaper_kr.html">라이트페이퍼</a>
       <a href="/static/whitepaper_kr.html">화이트페이퍼</a>
       <a href="/static/tokenomics_kr.html">토큰노믹스</a>
+      <a href="/static/presale.html">프리세일</a>
       <a href="/static/contact.html">소통채널</a>
       <a href="/static/donate.html">💖 기부하기</a>
     </nav>
   </header>
 
+  <!-- 프로젝트 소개 -->
   <div class="section">
     <h2>SCITY란?</h2>
-    <p>SCITY는 한국인의 빨리빨리 문화 '8282'와 서울의 정체성을 담아 만든 밈 기반 유틸리티 토큰입니다.  
-    여행자와 Web3 참여자를 위한 로컬 결제·보상 생태계를 만들어갑니다.</p>
+    <p>
+      SCITY는 한국인의 ‘8282’ 문화와 서울의 정체성을 담은 <b>밈 기반 유틸리티 토큰</b>입니다.
+      여행자와 Web3 참여자를 연결하여 <b>로컬 결제·보상 생태계</b>를 만들어 갑니다.
+    </p>
+
+    <!-- 핵심 수치 퀵팩트 -->
+    <div class="facts" aria-label="SCITY 핵심 정보">
+      <div class="fact"><b>총발행량</b>8,282,828,282 SCITY</div>
+      <div class="fact"><b>체인/표준</b>BNB Smart Chain · BEP-20</div>
+      <div class="fact"><b>프리세일</b>할당 10% (828,282,828)</div>
+      <div class="fact"><b>초기 DEX</b>PancakeSwap</div>
+    </div>
+
+    <div class="cta-wrap">
+      <a class="button" href="/static/presale.html">프리세일 참여 안내</a>
+      <a class="button secondary" href="/static/tokenomics_kr.html">토큰노믹스 보기</a>
+    </div>
   </div>
 
+  <!-- 왜 SCITY인가요 -->
   <div class="section">
     <h2>왜 SCITY인가요?</h2>
-    <ul style="list-style: none; padding-left: 0;">
-      <li>✔ 스마트 계약 권한 포기, 공정한 런칭</li>
-      <li>✔ 커뮤니티 중심, 100% 투명한 분배</li>
-      <li>✔ 서울 여행자와 밈 문화를 연결하는 Web3 생태계</li>
-      <li>✔ 실사용 가능한 결제 및 리워드 시스템 목표</li>
+    <ul>
+      <li>✔ 커뮤니티 중심, <b>투명한 분배</b>와 운영</li>
+      <li>✔ <b>여행·상점 결제</b> 및 <b>참여 보상</b>을 지향하는 실사용 유틸리티</li>
+      <li>✔ <b>프리세일 10%</b>로 초기 분산과 참여 기회 제공</li>
+      <li>✔ 초기 상장: PancakeSwap(예정), <b>BEP-20</b> 생태계 호환</li>
     </ul>
   </div>
 
+  <!-- 참여 섹션(문구 업데이트) -->
   <div class="section">
     <h2>지금 참여하세요</h2>
-    <p>사전판매도, VC도 없습니다.<br>
-    빨리빨리, 서울스럽게, SCITY답게.</p>
-    <!--
-      <a href="#" class="button">SCITY 토큰 받기 (PancakeSwap)</a>
-    -->
+    <p>
+      <b>프리세일이 진행될 예정</b>입니다. 상세 일정·가격·조건은 공식 채널과 프리세일 페이지에서 공지합니다.<br>
+      빠르게, 서울답게, SCITY답게.
+    </p>
+    <div class="cta-wrap">
+      <a class="button" href="/static/presale.html">프리세일 안내 보기</a>
+      <a class="button secondary" href="/static/contact.html">소통채널</a>
+    </div>
   </div>
 
   <footer>
-    &copy; 2025 SCITY 프로젝트 | 서울과 빨리빨리 문화를 담은 커뮤니티 밈코인
+    &copy; 2025 SCITY 프로젝트 · <a href="mailto:seoulcitycoin@gmail.com" style="color:#82d4f9;">Contact</a>
   </footer>
 </body>
 </html>
