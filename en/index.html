@@ -1,112 +1,118 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEOUL MEME CITY - Powered by 8282 culture</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCITY — Seoul Meme City Coin (8282 Culture)</title>
+  <meta name="description" content="SCITY — Total supply 8,282,828,282 SCITY · Presale 10% · DEX Liquidity 50% · BNB Smart Chain (BEP-20) · Initial DEX PancakeSwap">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     nav a {
-      margin: 0 1rem;
-      color: #ffcc00;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.05rem;
+      margin: 0 1rem; color: #ffcc00; text-decoration: none;
+      font-weight: bold; font-size: 1.05rem;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
     body {
-      font-family: 'Orbitron', sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: 'Orbitron', sans-serif; margin: 0; padding: 0;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
+      color: white; text-align: center;
     }
-    header {
-      padding: 2rem 1rem;
-      background-color: rgba(0,0,0,0.4);
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    p.tagline {
-      font-size: 1.2rem;
-      font-style: italic;
-      color: #82d4f9;
-    }
+    header { padding: 2rem 1rem; background-color: rgba(0,0,0,0.4); }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    p.tagline { font-size: 1.2rem; font-style: italic; color: #82d4f9; }
+
     .section {
-      margin: 3rem auto;
-      padding: 1rem 2rem;
-      max-width: 800px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 1rem;
+      margin: 3rem auto; padding: 1rem 2rem; max-width: 900px;
+      background-color: rgba(255,255,255,0.05); border-radius: 1rem; text-align: left;
     }
-    .section h2 {
-      color: #ffd700;
+    .section h2 { color: #ffd700; text-align: center; }
+    .section p { line-height: 1.7; }
+    .section ul { list-style: none; padding-left: 0; }
+    .section li { margin: .5rem 0; }
+
+    .facts {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px; margin-top: 1rem;
     }
+    .fact {
+      background: rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.1);
+      border-radius: .8rem; padding: 1rem; text-align: center;
+    }
+    .fact b { display: block; font-size: 1.1rem; margin-bottom: .4rem; color: #ffd700; }
+
+    .cta-wrap { text-align: center; margin-top: 1rem; }
     .button {
-      display: inline-block;
-      padding: 0.8rem 1.6rem;
-      background-color: #00d1b2;
-      color: white;
-      font-weight: bold;
-      border-radius: 0.5rem;
-      margin-top: 1rem;
-      text-decoration: none;
+      display: inline-block; padding: 0.8rem 1.6rem;
+      background-color: #00d1b2; color: white; font-weight: bold;
+      border-radius: 0.5rem; margin: .25rem .4rem; text-decoration: none;
     }
-    footer {
-      margin-top: 5rem;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
+    .button.secondary { background-color: transparent; border: 1px solid #00d1b2; }
+
+    footer { margin-top: 5rem; padding: 1rem; font-size: 0.9rem; color: #aaa; text-align: center; }
   </style>
 </head>
 <body>
   <header>
-    <h1>SEOUL CITY COIN</h1>
-    <p class="tagline">The Global Utility Coin Inspired by 8282 Culture</p>
+    <h1>SEOUL CITY COIN (SCITY)</h1>
+    <p class="tagline">A global utility meme coin inspired by Korea’s 8282 speed culture</p>
     <nav>
       <a href="/static/lightpaper_en.html">Lightpaper</a>
       <a href="/static/whitepaper_en.html">Whitepaper</a>
       <a href="/static/tokenomics_en.html">Tokenomics</a>
+      <a href="/static/presale_en.html">Presale</a>
       <a href="/static/contact_en.html">Contacts</a>
-      <a href="/static/donate_en.html">💖Donate</a>
-
-
+      <a href="/static/donate_en.html">💖 Donate</a>
     </nav>
   </header>
 
+  <!-- What is SCITY -->
   <div class="section">
     <h2>What is SCITY?</h2>
-    <p>SCITY is a decentralized meme token born from Korea's fast and passionate 8282 culture. It aims to empower global travelers and digital citizens with real-world utility and fast payments.</p>
+    <p>
+      SCITY is a <b>utility-driven meme token</b> born from Seoul’s spirit and Korea’s “8282” (speed) culture.
+      It connects travelers and Web3 participants to build a <b>local payments & rewards ecosystem</b>.
+    </p>
+
+    <!-- Quick Facts -->
+    <div class="facts" aria-label="SCITY Quick Facts">
+      <div class="fact"><b>Total Supply</b>8,282,828,282 SCITY</div>
+      <div class="fact"><b>Chain/Standard</b>BNB Smart Chain · BEP-20</div>
+      <div class="fact"><b>Presale</b>10% allocation (828,282,828)</div>
+      <div class="fact"><b>Initial DEX</b>PancakeSwap</div>
+    </div>
+
+    <div class="cta-wrap">
+      <a class="button" href="/static/presale_en.html">Join Presale</a>
+      <a class="button secondary" href="/static/tokenomics_en.html">View Tokenomics</a>
+    </div>
   </div>
 
+  <!-- Why SCITY -->
   <div class="section">
     <h2>Why SCITY?</h2>
-    <ul style="list-style: none; padding-left: 0;">
-      <li>✔ Contract Renounced, Fair Launch</li>
-      <li>✔ Community Owned & 100% Transparent</li>
-      <li>✔ Inspired by Korean Speed Culture & Seoul Tourism</li>
-      <li>✔ SCITY Utility for Real-World Use Cases (coming soon)</li>
+    <ul>
+      <li>✔ Community-centric with <b>transparent distribution</b></li>
+      <li>✔ Aiming for <b>real-world payments</b> and <b>participation rewards</b></li>
+      <li>✔ <b>Presale 10%</b> enables early distribution and broad participation</li>
+      <li>✔ Launching on PancakeSwap (planned) in the <b>BEP-20</b> ecosystem</li>
     </ul>
   </div>
 
+  <!-- Call to action -->
   <div class="section">
     <h2>Join the Movement</h2>
-    <p>We are community-driven. No presale, no VC, no nonsense.<br>
-    Just speed, Seoul, and SCITY.</p>
-    <!--
-    <a href="#" class="button">Get SCITY on PancakeSwap</a>
-    -->
+    <p>
+      <b>Presale is planned.</b> Detailed schedule, pricing, and conditions will be announced on the official channels and the presale page.<br />
+      Fast, Seoul-style, and true to SCITY.
+    </p>
+    <div class="cta-wrap">
+      <a class="button" href="/static/presale_en.html">See Presale Details</a>
+      <a class="button secondary" href="/static/contact_en.html">Community & Contacts</a>
+    </div>
   </div>
 
   <footer>
-    &copy; 2025 SCITY Project | Built with speed & spirit by the Seoul City Coin community
+    &copy; 2025 SCITY Project · <a href="mailto:seoulcitycoin@gmail.com" style="color:#82d4f9;">Contact</a>
   </footer>
 </body>
 </html>
