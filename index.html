@@ -1,20 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Redirecting...</title>
+  <title>SCITY — Language Redirect</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 이 페이지는 단순 리다이렉트용이므로 검색엔진 노출 방지 -->
+  <meta name="robots" content="noindex" />
+  <!-- 다국어 안내 (SEO용) -->
+  <link rel="alternate" hreflang="ko-KR" href="/kr/index.html" />
+  <link rel="alternate" hreflang="en" href="/en/index.html" />
+  <link rel="alternate" hreflang="x-default" href="/en/index.html" />
   <script>
-    const lang = navigator.language || navigator.userLanguage;
-    if (lang.startsWith("ko")) {
-      window.location.href = "/kr/index.html";
-    } else {
-      window.location.href = "/en/index.html";
-    }
+    (function () {
+      // 1) ?lang=ko|en 로 강제 선택 가능
+      const params = new URLSearchParams(window.location.search);
+      const override = params.get("lang");
+      if (override === "ko" || override === "en") {
+        try { localStorage.setItem("scity_lang", override); } catch (e) {}
+        window.location.replace("/" + (override === "ko" ? "kr" : "en") + "/index.html");
+        return;
+      }
+      // 2) 사용자 저장 선호언어 우선
+      try {
+        const saved = localStorage.getItem("scity_lang");
+        if (saved === "ko" || saved === "en") {
+          window.location.replace("/" + (saved === "ko" ? "kr" : "en") + "/index.html");
+          return;
+        }
+      } catch (e) {}
+      // 3) 브라우저 언어 감지
+      const lang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+      const isKorean = lang.startsWith("ko");
+      window.location.replace(isKorean ? "/kr/index.html" : "/en/index.html");
+    })();
   </script>
 </head>
 <body>
-  <p>Redirecting to your preferred language version...</p>
+  <p>Redirecting… If you are not redirected, choose your language:</p>
+  <ul>
+    <li><a href="/kr/index.html" rel="alternate" hreflang="ko-KR">한국어로 보기</a></li>
+    <li><a href="/en/index.html" rel="alternate" hreflang="en">View in English</a></li>
+  </ul>
+  <noscript>
+    <p>자바스크립트가 꺼져 있습니다. 아래 링크로 이동하세요:</p>
+    <ul>
+      <li><a href="/kr/index.html">한국어</a></li>
+      <li><a href="/en/index.html">English</a></li>
+    </ul>
+  </noscript>
 </body>
 </html>
