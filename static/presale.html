@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCITY Presale — 프리세일 안내 (KR)</title>
+  <meta name="description" content="SCITY 프리세일: 소프트캡 30 BNB · 하드캡 100 BNB · TGE 100% 언락 · ~15% 할인. 타이머/진행률/FAQ 포함." />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg1:#0f2027;--bg2:#203a43;--bg3:#2c5364;--gold:#ffcc00;--cyan:#66ccff;--mint:#00d1b2}
+    *{box-sizing:border-box}
+    body{font-family:'Orbitron','Noto Sans KR',sans-serif;margin:0;color:#fff;background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3))}
+    header{padding:24px 16px;text-align:center;background:rgba(0,0,0,.35)}
+    h1{margin:6px 0 2px;font-size:2.1rem}
+    .tag{color:#82d4f9;opacity:.95}
+    main{max-width:980px;margin:20px auto;padding:0 16px}
+    section{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px;margin:16px 0;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+    h2{color:var(--gold);margin:0 0 10px}
+    p,li{line-height:1.7}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .card{background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px;text-align:center}
+    .kpi{font-size:1.25rem}
+    .kpi small{display:block;opacity:.85}
+
+    /* Countdown */
+    .countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:10px 0}
+    .slot{min-width:86px;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.15);padding:10px 12px;border-radius:10px;text-align:center}
+    .slot b{display:block;font-size:1.6rem}
+
+    /* Progress */
+    .progress-wrap{margin-top:10px}
+    .progress-bar{height:14px;background:rgba(255,255,255,.18);border-radius:999px;overflow:hidden}
+    .progress-bar > span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--mint),#42e3ff)}
+    .progress-legend{display:flex;justify-content:space-between;font-size:.95rem;opacity:.95;margin-top:6px}
+
+    /* Buttons */
+    .btn{display:inline-block;background:var(--mint);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;margin:4px}
+    .btn.outline{background:transparent;border:1px solid var(--mint)}
+
+    details{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px;margin:10px 0}
+    summary{cursor:pointer}
+
+    footer{padding:24px;text-align:center;opacity:.85}
+    a{color:var(--cyan)} a:hover{text-decoration:underline}
+    .mono{font-family:ui-monospace,Consolas,Menlo,monospace}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SCITY Presale (KR)</h1>
+    <div class="tag">소프트캡 30 BNB · 하드캡 100 BNB · ~15% 할인 · TGE 100% 언락</div>
+  </header>
+  <main>
+    <!-- Hero & Countdown -->
+    <section id="hero">
+      <h2>프리세일 개요</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="kpi"><b>10%</b><small>할당 (828,282,828 SCITY)</small></div>
+        </div>
+        <div class="card">
+          <div class="kpi"><b>30 / 100</b><small>Soft / Hard Cap (BNB)</small></div>
+        </div>
+        <div class="card">
+          <div class="kpi"><b>~15%↓</b><small>TGE 유동성 가격 대비</small></div>
+        </div>
+        <div class="card">
+          <div class="kpi"><b>BEP‑20</b><small>BNB Smart Chain</small></div>
+        </div>
+      </div>
+      <div style="margin-top:12px">
+        <div class="countdown" id="countdown" aria-live="polite"></div>
+        <div style="text-align:center">
+          <a class="btn" href="#howto">지갑 연결 & 참여 가이드</a>
+          <a class="btn outline" href="/static/whitepaper_kr.html">화이트페이퍼</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress -->
+    <section id="progress">
+      <h2>진행률</h2>
+      <div class="progress-wrap">
+        <div class="progress-bar" aria-label="모금 진행률"><span id="bar"></span></div>
+        <div class="progress-legend">
+          <div>모금액: <b id="raised">0</b> / <span id="hard">100</span> BNB</div>
+          <div>소프트캡: <span>30 BNB</span></div>
+        </div>
+      </div>
+      <p class="mono" id="priceLine">Presale Price: ~15% below TGE liquidity price</p>
+    </section>
+
+    <!-- How To -->
+    <section id="howto">
+      <h2>참여 방법</h2>
+      <ol>
+        <li><b>지갑 연결</b> (MetaMask 등) → 체인: <b>BNB Smart Chain</b></li>
+        <li>프리세일 페이지에서 <b>기여 금액(BNB)</b> 입력</li>
+        <li>거래 확인 후 <b>영수증 Tx</b>를 보관</li>
+        <li>TGE 이후 <b>Claim</b> 버튼으로 SCITY 수령 (100% 언락)</li>
+      </ol>
+      <p class="mono">컨트랙트 주소: <b>TBA</b> (배포 후 공개)</p>
+      <a class="btn" href="#">지갑 연결 (샘플 버튼)</a>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2>FAQ</h2>
+      <details><summary>미소진 물량은 어떻게 되나요?</summary><p>커뮤니티 투표로 <b>전량 소각</b> 또는 <b>LP 전환</b> 중 선택합니다.</p></details>
+      <details><summary>KYC/Audit 자료는 어디서 보나요?</summary><p>프리세일 시작 전/중에 <b>감사 리포트 요약</b>과 링크를 본 페이지에 게시합니다.</p></details>
+      <details><summary>지갑당 참여 상한은 있나요?</summary><p>분산을 위해 <b>하드캡의 2~3%/지갑</b> 상한을 권장합니다.</p></details>
+      <details><summary>세일 중 거래세가 있나요?</summary><p>프리세일에는 거래세를 부과하지 않습니다. 상장 후 0~2% 범위 내에서 <b>커뮤니티 투표</b>로 도입/해제할 수 있습니다.</p></details>
+    </section>
+
+    <!-- Risk -->
+    <section id="risk">
+      <h2>위험 고지</h2>
+      <p>가상자산은 높은 변동성을 가질 수 있으며 원금 손실이 발생할 수 있습니다. <b>본 페이지는 투자 권유가 아닙니다.</b> 관할 지역의 규제를 확인하세요.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 SCITY Project · <a href="mailto:seoulcitycoin@gmail.com">seoulcitycoin@gmail.com</a>
+  </footer>
+
+  <script>
+    // ===== Editable Presale Params =====
+    const CONFIG = {
+      // 프리세일 시작(또는 종료) 시각 — 필요 시 수정하세요 (KST 기준 예: 2025-10-01T12:00:00+09:00)
+      targetISO: '2025-10-01T12:00:00+09:00',
+      // 진행률 계산용 — 백엔드에서 주입하거나 수동 업데이트
+      softCap: 30,
+      hardCap: 100,
+      raised: 0
+    };
+
+    // ===== Countdown =====
+    const cd = document.getElementById('countdown');
+    function renderCountdown(){
+      const t = new Date(CONFIG.targetISO).getTime();
+      const now = Date.now();
+      let diff = Math.max(0, t - now);
+      const d = Math.floor(diff / (1000*60*60*24)); diff -= d*86400000;
+      const h = Math.floor(diff / (1000*60*60)); diff -= h*3600000;
+      const m = Math.floor(diff / (1000*60)); diff -= m*60000;
+      const s = Math.floor(diff / 1000);
+      cd.innerHTML = `
+        <div class="slot"><small>Days</small><b>${String(d).padStart(2,'0')}</b></div>
+        <div class="slot"><small>Hours</small><b>${String(h).padStart(2,'0')}</b></div>
+        <div class="slot"><small>Minutes</small><b>${String(m).padStart(2,'0')}</b></div>
+        <div class="slot"><small>Seconds</small><b>${String(s).padStart(2,'0')}</b></div>`;
+    }
+    setInterval(renderCountdown, 1000); renderCountdown();
+
+    // ===== Progress Bar =====
+    const bar = document.getElementById('bar');
+    const raised = document.getElementById('raised');
+    const hard = document.getElementById('hard');
+    function renderProgress(){
+      const pct = Math.max(0, Math.min(100, (CONFIG.raised/CONFIG.hardCap)*100));
+      bar.style.width = pct + '%';
+      raised.textContent = CONFIG.raised.toLocaleString();
+      hard.textContent = CONFIG.hardCap.toLocaleString();
+    }
+    renderProgress();
+  </script>
+</body>
+</html>
