@@ -2,87 +2,63 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>서울시티코인 Whitepaper</title>
+  <title>SCITY Whitepaper (KR) — 8,282,828,282 Supply · Presale 10% · BEP-20</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SCITY — 총발행량 8,282,828,282 SCITY · 프리세일 10% · DEX 유동성 50% · BNB Smart Chain(BEP-20). 서울의 8282 문화와 실사용 결제/보상 생태계를 지향하는 유틸리티 밈 코인.">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Orbitron', 'Noto Sans KR', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
-    header {
-      margin-bottom: 2rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    section {
-      max-width: 850px;
-      margin: auto;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 14px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    }
-    h2 {
-      color: #ffcc00;
-      margin-top: 1.5rem;
-    }
-    p, li {
-      line-height: 1.6;
-      font-size: 1.1rem;
-    }
-    ul {
-      text-align: left;
-      max-width: 700px;
-      margin: 1rem auto;
-    }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      opacity: 0.8;
-      line-height: 1.6;
-    }
-    a {
-      color: #66ccff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    :root{--bg1:#0f2027;--bg2:#203a43;--bg3:#2c5364;--gold:#ffcc00;--cyan:#66ccff}
+    body{font-family:'Orbitron','Noto Sans KR',sans-serif;margin:0;padding:2rem;background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));color:#fff;text-align:center}
+    header{margin-bottom:2rem}
+    h1{font-size:2.4rem;margin:.2rem 0}
+    .tag{opacity:.9;color:#82d4f9;margin:.2rem 0 1rem}
+    section{max-width:900px;margin:1.2rem auto;background:rgba(255,255,255,.05);border-radius:14px;padding:2rem;box-shadow:0 4px 10px rgba(0,0,0,.35);text-align:left}
+    h2{color:var(--gold);margin-top:0}
+    p,li{line-height:1.7;font-size:1.05rem}
+    ul{padding-left:1rem}
+    .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:.6rem}
+    .fact{background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.1);border-radius:.8rem;padding:1rem;text-align:center}
+    .fact b{color:var(--gold)}
+    table{width:100%;border-collapse:collapse;margin-top:.6rem}
+    th,td{padding:10px;border-bottom:1px solid rgba(255,255,255,.1);text-align:right}
+    th:first-child,td:first-child{text-align:left}
+    .btn{display:inline-block;background:#00d1b2;color:#fff;padding:.6rem 1.2rem;border-radius:10px;text-decoration:none;font-weight:700}
+    footer{margin:2rem 0;opacity:.85;line-height:1.6}
+    a{color:var(--cyan)} a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
   <header>
     <h1>서울시티코인 (SCITY) Whitepaper</h1>
-    <p>서울의 속도와 정을 담은 Web3 여행 유틸리티 코인</p>
+    <div class="tag">서울의 속도(8282)와 정(情)을 담은 Web3 여행 유틸리티 밈 코인</div>
+    <div class="facts" aria-label="SCITY 핵심 정보">
+      <div class="fact"><b>총발행량</b><div>8,282,828,282 SCITY</div></div>
+      <div class="fact"><b>네트워크/표준</b><div>BNB Smart Chain · BEP-20</div></div>
+      <div class="fact"><b>프리세일</b><div>10% (828,282,828)</div></div>
+      <div class="fact"><b>DEX 유동성</b><div>50% (4,141,414,141)</div></div>
+    </div>
   </header>
 
   <section>
     <h2>1. 서론</h2>
-    <p>서울시티코인(SCITY)은 디지털화된 글로벌 도시 서울을 기반으로 하여, 실생활에서 활용 가능한 블록체인 유틸리티를 제공하는 것을 목표로 합니다. 이 프로젝트는 외국인 관광객, 현지 주민, 디지털 노마드, 크립토 유저들을 위한 실질적인 가치 창출을 지향합니다.</p>
+    <p>SCITY는 서울의 ‘8282’ 문화와 커뮤니티의 창작력을 결합하여, 여행자·상점·크립토 유저를 잇는
+       <b>실사용 결제·보상 생태계</b>를 목표로 합니다. 단순 밈을 넘어, 현장에서 쓸 수 있는 유틸리티로 성장합니다.</p>
   </section>
 
   <section>
     <h2>2. 문제 정의</h2>
-    <p>서울은 세계적인 관광지임에도 불구하고 외국인들이 간편하게 사용할 수 있는 결제 및 혜택 시스템이 부족합니다. 또한 크립토 생태계와의 연계도 미비하여, 새로운 형태의 관광·지역경제·보상시스템이 요구되고 있습니다.</p>
+    <p>서울은 세계적 관광지이지만, 외국인 친화 결제/혜택 시스템과 크립토 연계가 부족합니다. 관광 소비 촉진과
+       지역 파트너의 참여를 유도할 <b>간편 결제·보상 인프라</b>가 요구됩니다.</p>
   </section>
 
   <section>
-    <h2>3. 솔루션: 서울시티코인</h2>
+    <h2>3. 솔루션: SCITY</h2>
     <ul>
-      <li>QR 기반의 모바일 간편 결제 시스템</li>
-      <li>콘텐츠 참여자 및 커뮤니티 기여자 보상</li>
-      <li>서울 내 제휴 매장/서비스와 연계</li>
-      <li>밈코인 요소를 통한 친근한 브랜드 이미지</li>
-      <li>다국어 웹 및 앱을 통한 글로벌 접근성</li>
+      <li>QR/지갑 기반 간편 결제 및 <b>소액 결제</b> PoC</li>
+      <li>콘텐츠/홍보/번역/가이드 등 <b>커뮤니티 기여 보상</b></li>
+      <li>여행 상점·가이드·서비스와의 <b>로컬 제휴</b></li>
+      <li>글로벌 접근성을 위한 <b>다국어 웹/앱</b></li>
+      <li><b>안티봇·베스팅</b> 정책으로 초기 시장 안정화</li>
     </ul>
   </section>
 
@@ -91,54 +67,68 @@
     <p>
       - 토큰명: SEOUL CITY COIN<br>
       - 심볼: SCITY<br>
-      - 총 공급량: 828,282,828,282<br>
-      - 배포 방식: 초기 유동성 공급 + 커뮤니티 분배 + 운영 및 개발 리저브<br>
-      - 네트워크: Polygon (ERC-20 호환)
+      - 총 공급량: <b>8,282,828,282</b><br>
+      - 네트워크: <b>BNB Smart Chain (BEP-20)</b><br>
+      - 배포: 프리세일/DEX 유동성/커뮤니티 보상/개발·운영/마케팅/팀
     </p>
-  </section>
-
-  <section>
-    <h2>5. 생태계 구성</h2>
+    <h3>4-1. 토큰 분배(최종 확정)</h3>
+    <table>
+      <thead><tr><th>구분</th><th>비율</th><th>수량</th></tr></thead>
+      <tbody>
+        <tr><td>DEX 초기 유동성 풀</td><td><b>50%</b></td><td><b>4,141,414,141</b></td></tr>
+        <tr><td>프리세일</td><td><b>10%</b></td><td><b>828,282,828</b></td></tr>
+        <tr><td>커뮤니티 보상</td><td><b>17%</b></td><td><b>1,408,080,808</b></td></tr>
+        <tr><td>프로젝트 개발·운영</td><td><b>13%</b></td><td><b>1,076,767,677</b></td></tr>
+        <tr><td>마케팅·파트너십</td><td><b>5%</b></td><td><b>414,141,414</b></td></tr>
+        <tr><td>팀/기여자 리워드</td><td><b>5%</b></td><td><b>414,141,414</b></td></tr>
+        <tr><td><b>합계</b></td><td><b>100%</b></td><td><b>8,282,828,282</b></td></tr>
+      </tbody>
+    </table>
+    <h3>4-2. 베스팅/락업 권장</h3>
     <ul>
-      <li>Tour2Earn: 여행을 통해 보상 획득</li>
-      <li>Share2Earn: 콘텐츠, 후기, SNS 참여자에게 보상</li>
-      <li>Guide2Earn: 여행가이드, 해설사 활동 보상 시스템</li>
+      <li>개발·운영 13%: TGE 0% → <b>6개월 클리프 + 24개월 선형</b></li>
+      <li>팀/기여자 5%: TGE 0~10% → <b>18~24개월 선형</b></li>
+      <li>프리세일 10%: <b>TGE 100% 언락</b> (초기 <b>안티봇/거래한도</b> 병행)</li>
+    </ul>
+    <h3>4-3. 안티봇</h3>
+    <ul>
+      <li>배포 직후 <b>3~5블록 쿨다운</b></li>
+      <li>초기 <b>지갑별 거래 상한</b> (예: 0.5~1%/tx)</li>
+      <li>예외 리스트 최소화, 거래세(0~2%)는 커뮤니티 투표로 적용/해제</li>
     </ul>
   </section>
 
   <section>
-    <h2>6. 로드맵</h2>
+    <h2>5. 프리세일(개요)</h2>
     <ul>
-      <li>Q3 2025: 스마트 계약 배포 / DEX 상장 / 커뮤니티 빌딩</li>
-      <li>Q4 2025: 제휴사 확보 / 관광서비스 시범 운영</li>
-      <li>2026년 상반기: 모바일 앱 출시 / 실사용 매장 확대</li>
-      <li>2026년 하반기: NFT 서비스 / DAO 도입 검토</li>
+      <li>할당량: <b>828,282,828 SCITY (10%)</b></li>
+      <li>소프트캡/하드캡: <b>30 / 100 BNB</b></li>
+      <li>가격: TGE 유동성 가격 대비 <b>~15% 할인</b></li>
+      <li>미소진 물량: <b>소각</b> 또는 <b>LP 전환</b> (커뮤니티 투표)</li>
+      <li>KYC/감사(Audit) 공개 권장</li>
     </ul>
   </section>
 
   <section>
-    <h2>7. 팀 & 파트너십</h2>
-    <p>서울 기반의 크립토 전문가, 디자이너, 여행 업계 종사자들이 협업하며, 파트너십을 통해 실사용 사례를 빠르게 확보하고 있습니다. 향후 글로벌 인플루언서 및 여행 플랫폼과의 협업도 추진합니다.</p>
+    <h2>6. 로드맵(요약)</h2>
+    <ul>
+      <li>Q3~Q4 2025: 프리세일, PancakeSwap 상장, 베스팅/락업 온체인 공개</li>
+      <li>Q1 2026: 소액 결제 PoC, 파트너 온보딩</li>
+      <li>Q2 2026: 상점/가이드용 SDK 베타, 다국어 콘텐츠 허브</li>
+      <li>이후: 실사용 상점 확대, 이벤트, (필요 시) 멀티체인</li>
+    </ul>
   </section>
-   <div style="margin-top: 2rem;">
-    <a href="/index.html" style="
-      display: inline-block;
-      background-color: #00d1b2;
-      color: white;
-      padding: 0.6rem 1.4rem;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 1rem;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    ">← 메인으로 돌아가기</a>
-  </div>
+
+  <section>
+    <h2>7. 리스크 & 면책</h2>
+    <ul>
+      <li>가격 변동성: 밈/커뮤니티 특성상 급변 가능</li>
+      <li>규제: 각국 정책 변화에 따른 제약 가능</li>
+      <li>기술: 스마트컨트랙트 취약점 리스크 (감사/버그바운티 권장)</li>
+    </ul>
+    <p><b>본 백서는 투자 권유가 아니며</b>, 내용은 사전 예고 없이 변경될 수 있습니다.</p>
+  </section>
+
+  <p><a class="btn" href="/kr/index.html">← 메인으로 돌아가기</a></p>
 
   <footer>
-    ⓒ 2025 SEOUL CITY COIN<br>
-    공식 홈페이지: <a href="https://scity.onrender.com" target="_blank">scity.onrender.com</a><br>
-    이메일: <a href="mailto:seoulcitycoin@gmail.com">seoulcitycoin@gmail.com</a><br>
-    X (트위터): <a href="https://x.com/seoulcitycoin" target="_blank">@seoulcitycoin</a>
-  </footer>
-</body>
-</html>
